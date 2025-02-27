@@ -1,0 +1,62 @@
+@keyframes infiniteshift1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes infiniteshift2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes infiniteshift3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes errormsg {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 100%;
+    }
+
+    85% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+

@@ -1,0 +1,673 @@
+*{
+    box-sizing: border-box ;
+}
+
+:root {
+    --decoration-color1: #e6f2ff;
+    --decoration-color2: #e6d2df;
+    --background-color: #b3c2e4;
+    --darker-decoration-color: #72648e;
+    --yellow: #ffe4af;
+    --main-outline: #627398;
+    --darmer-main-outline: #45577b ;
+}
+
+@font-face {
+    font-family: dongle;
+    src: url(assets/fonts/Dongle-Regular.ttf);
+}
+
+body {
+    text-align: center;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    /* may need to add margin 100px if issues in future */
+}
+
+/* home screen */
+
+/* pop up */
+.popup {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    border-radius: 20px;
+    z-index: 100000;
+    background-color: white;
+    border: 4px solid var(--main-outline);
+    visibility: hidden;
+    transition: transform 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+    padding: 20px;
+    text-align: center;
+    font-family: dongle;
+    font-size: 30px;
+}
+
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #405074;
+}
+
+.disc {
+    width: 55px;
+    margin-left: 0;
+    position: absolute;
+    left: 8px;
+}
+
+#disc1 {
+    top: 85px;
+}
+
+#disc2 {
+    top: 125px;
+}
+
+#disc3 {
+    top: 173px;
+}
+
+/* main menu */
+
+button {
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: dongle;
+    color: var(--main-outline);
+    font-size: 22px;
+    background-color: white;
+    border-color: var(--main-outline);
+    border-width: 3px;
+    margin-top: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.enlarge:hover {
+    transform: scale(1.1);
+}
+
+#openbtn {
+    margin-top: 15px;
+}
+
+#slogan {
+    color: #405074;
+    font-family: dongle;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#pgg-logo {
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.imagecontainer {
+    background-color: white;
+    border-radius: 100px;
+    width: 550px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid var(--main-outline);
+}
+
+#star1 {
+    width: 100px;
+    z-index: 9999px;
+    position: relative;
+    top: -360px;
+    left: -360px;
+}
+
+#star2 {
+    width: 90px;
+    z-index: 9999px;
+    position: relative;
+    top: -330px;
+    left: -400px;
+}
+
+#star3 {
+    width: 105px;
+    z-index: 9999px;
+    position: relative;
+    top: 30px;
+    left: 250px;
+}
+
+#star4 {
+    width: 85px;
+    z-index: 9999px;
+    position: relative;
+    top: -150px;
+    left: 420px;
+}
+
+#star5 {
+    width: 100px;
+    z-index: 9999px;
+    position: relative;
+    top: -200px;
+    left: 370px;
+}
+
+.infiniteslide1 {
+    animation-name: infiniteshift1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.infiniteslide2 {
+    animation-name: infiniteshift2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.infiniteslide3 {
+    animation-name: infiniteshift3;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.examplegrid {
+    margin: 0;
+    place-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.box {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--darmer-main-outline);
+    margin: 2px;
+    color: var(--main-outline);
+    text-transform: uppercase;
+    /*display: ;*/
+    place-items: center;
+    font-family: dongle;
+    font-size: 2.4rem;
+    border-radius: 8px;
+    background-color: #f0f3ff;
+    
+}
+
+/* pop up cont. */
+
+#example {
+    color: white;
+    font-size: 30px;
+    padding-top: 3.5px;
+    text-align: center;
+}
+
+.examplecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #627398;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 3px solid #405074;
+}
+
+#intro {
+    color: white;
+    font-size: 30px;
+    padding-top: 3.5px;
+    text-align: center;
+}
+
+.rules {
+    margin-left: 40px;
+    color: #405074;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+
+#step3 {
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+#step2 {
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.explanation {
+    display: flex;
+    margin: 15px;
+    line-height: 20px;
+    justify-content: center;
+    color: #405074;
+}
+
+.introcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #627398;
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 3px solid #405074;
+}
+
+.box.empty {
+    background: var(--yellow);
+}
+
+.box.wrong {
+    background: #fadee9;
+}
+
+.box.right {
+    background: #ceeadf;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* game screen */
+
+.imagecontainer-gs {
+    background-color: white;
+    border-radius: 100px;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid var(--main-outline);
+}
+
+#pgg-logo-gs {
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.game {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: dongle;
+    width: 500px;
+    border: 4px solid var(--main-outline)
+}
+
+#back {
+    position: relative;
+    margin-top: 12px;
+    height: 30px;
+    background-color:#627398;
+    color: white;
+    text-align: center;
+    justify-content: 20px;
+    align-content: center;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restartlvl {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color:#627398;
+    color: white;
+}
+
+#openbtn-gs {
+    position: relative;
+    background-color:#627398;
+    color: white;
+}
+
+#menubtn {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    height: 30px;
+    background-color:#627398;
+    color: white;
+    text-align: center;
+    justify-content: 20px;
+    align-content: center;
+    padding-bottom: 30px;
+}
+
+#star6 {
+    width: 100px;
+    z-index: 9999px;
+    position: relative;
+    top: 0px;
+    left: -300px;
+}
+
+#star7 {
+    width: 90px;
+    position: relative;
+    top: -490px;
+    left: -300px;
+}
+
+#star8 {
+    width: 105px;
+    position: relative;
+    top: -430px;
+    left: -350px;
+}
+
+#star9 {
+    width: 85px;
+    position: relative;
+    top: -150px;
+    left: 320px;
+}
+
+#star10 {
+    width: 100px;
+    position: relative;
+    top: -220px;
+    left: 250px;
+}
+
+.congratulations {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1); /* change back to 0.1 when done editing*/
+    border-radius: 20px;
+    z-index: 100000;
+    background-color: white;
+    border: 4px solid var(--main-outline);
+    visibility: hidden;
+    transition: transform 0.4s;
+    width: 400px;
+}
+
+#congrats {
+    color: white;
+    font-size: 40px;
+    padding-top: 3.5px;
+    text-align: center;
+}
+
+.congratscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #627398;
+    border-radius: 30px;
+    width: 260px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 3px solid #405074;
+}
+
+#correctcodewas {
+    color: #405074;
+    text-align: center;
+}
+
+#back2 {
+    background-color:#627398;
+    color: white;
+}
+
+#playagain {
+    background-color:#627398;
+    color: white;
+}
+
+#correctcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f2ff;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    border: 3px solid #405074;
+    font-size: 35px;
+    color: #405074;
+}
+
+#correctcode2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f2ff;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    border: 3px solid #405074;
+    font-size: 35px;
+    color: #405074;
+}
+
+#overlay {
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    background-color: #1a2234;
+    opacity: 0;
+    z-index: 999; 
+    visibility: hidden;
+    transition: opacity 0.3 ease, visibility 0s 0.3s;
+}
+
+#overlay.show {
+    opacity: 0.5;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0;
+}
+
+.menuscrn {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1); /* change back to 0.1 when done editing*/
+    border-radius: 20px;
+    z-index: 100000;
+    background-color: white;
+    border: 4px solid var(--main-outline);
+    visibility: hidden;
+    transition: transform 0.4s;
+}
+
+.menu-content {    
+    text-align: center;
+    font-family: dongle;
+    font-size: 30px;
+    width: 200px;
+    height: 150px;
+}
+
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.loser {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* change back to 0.1 when done editing*/
+    border-radius: 20px;
+    z-index: 100000;
+    background-color: white;
+    border: 4px solid var(--main-outline);
+    visibility: hidden;
+    transition: transform 0.4s;
+    width: 400px;
+}
+
+.open-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#betterluck {
+    color: #405074;
+    text-align: center;
+    line-height: 20px;
+    margin: 20px;
+}
+
+.lostcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #627398;
+    border-radius: 30px;
+    width: 260px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 3px solid #405074;
+}
+
+#lost {
+    color: white;
+    font-size: 40px;
+    padding-top: 3.5px;
+    text-align: center;
+}
+
+/* error screen */
+
+.error {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* change back to 0.1 when done editing*/
+    border-radius: 20px;
+    z-index: 100000;
+    background-color: white;
+    border: 4px solid var(--main-outline);
+    visibility: hidden;
+    transition: transform 0.4s;
+    opacity: 0;
+}
+
+.error-popup {
+    visibility: visible;
+    transform: translate(-50%, -50%);
+    animation-name: errormsg;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+.error-content {    
+    text-align: center;
+    font-family: dongle;
+    font-size: 30px;
+    padding: 20px;
+    width: 400px;
+}
+
+.errorcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #627398;
+    border-radius: 30px;
+    width: 120px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 3px solid #405074;
+}
+
+#errortext {
+    color: white;
+    font-size: 40px;
+    padding-top: 3.5px;
+    text-align: center;
+}
+
+#errormsg {
+    padding-top: 8px;
+    color: #627398;
+    line-height: 20px;
+    text-align: center;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title> unlock it game screen </title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="animation.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="overlay"></div>
+
+            <!--Logo-->
+            <div class = "imagecontainer-gs">
+                <img
+                src = "assets/images/unlockit_logo.png"
+                id = "pgg-logo-gs"
+                alt = logo
+                >
+            </div>
+
+            <!--Buttons-->
+            <button id="menubtn" onclick="openMenu()">
+                menu
+            </button>
+
+            <div id="menuscrn" class="menuscrn">
+               <div class = "menu-content" id = "menu-content">
+                    <button id="back" onclick="window.location.href='index.html'"> 
+                        main menu
+                    </button>
+                    
+                    <button id="openbtn-gs" onclick="openPopup()">
+                        how to play
+                    </button>
+                    
+                    <button id="restartlvl" onclick="window.location.href='game.html'">
+                        restart level
+                    </button>
+
+                    <span id = "closebtn" class="close-btn" onclick="closeMenu()"> &times; </span>
+                </div>
+            </div>
+
+            <!--Game-->
+            <div id = "game" class="game">
+                <div class = "grid"></div>
+                </div>
+            </div>
+        </div>
+
+         <!--Pop up-->
+         <div class="popup " id="popup">
+            <div class = "popup-content" id="popup-content">
+                <div class = "introcontainer">
+                    <p id="intro">
+                        how to play
+                    </p>
+                </div>
+
+                <div class = "rules">
+                    <img id="disc1" src="assets/images/sunsetyellow_png.png" class="disc">
+
+                    <p id="step1">
+                        guess the passcode in 6 tries.
+                    </p>
+
+                    <img id="disc2" src="assets/images/coolgreen_disc.png" class="disc">
+
+                    <p id="step2">
+                        each guess must be a valid 5-number combination (numbers can repeat)
+                    </p>
+
+                    <img id="disc3" src="assets/images/purple_disc.png" class="disc">
+
+                    <p id="step3">
+                        the color of the tiles will change according to the accuracy of your number
+                    </p>
+                </div>
+
+                <div class = "examplecontainer">
+                    <p id="example">
+                        example
+                    </p>
+                </div>
+
+                <div class = "examplegrid">
+                    <div class = "grid" >
+                        <div class = "box right" > 1 </div>
+                        <div class = "box empty" > 5 </div>
+                        <div class = "box right" > 3 </div>
+                        <div class = "box empty" > 2 </div>
+                        <div class = "box wrong" > 6 </div>
+                    </div>
+                </div>
+
+                <div class = "explanation">
+                    <p>
+                        <span class="bold"> 1 </span> and <span class="bold"> 3 </span> are in the passcode and in the right spots
+                        <br>
+                        <span class="bold"> 5 </span> and <span class="bold"> 2 </span> are in the passcode but not in the right spots
+                        <br>
+                        <span class="bold"> 6 </span> is not in the passcode
+                    </p>
+                </div>
+                <span id = "closebtn" class="close-btn" onclick="closePopup()"> &times; </span>
+            </div>
+        </div>
+    </div>
+
+    <!--Winner-->
+    <div class="congratulations" id="congratulations">
+        <div class = "popup-content" id="popup-content">
+            <div class = "congratscontainer">
+                <p id="congrats">
+                    congratulations!
+                </p>
+            </div>
+
+            <p id = "correctcodewas">
+                the correct passcode was:
+            </p>
+
+            <div id = "correctcode">
+            </div>
+
+            <button id="playagain" class="enlarge" onclick="window.location.href='game.html'"> play again </button>
+            <br>
+            <button id="back2" class="enlarge" onclick="window.location.href='index.html'"> main menu </button>
+
+            <span id = "closebtn" class="close-btn" onclick="closeCongrats()"> &times; </span>
+        </div>
+    </div>
+
+    <!--Loser-->
+    <div class="loser" id="loser">
+        <div class = "popup-content" id="popup-content">
+            <div class = "lostcont">
+                <p id="lost">
+                    aw, you lost
+                </p>
+            </div>
+
+            <p id = "betterluck">
+                better luck next time!
+                <br>
+                the correct passcode was:
+            </p>
+
+            <div id = "correctcode2">
+            </div>
+
+            <button id="playagain" class="enlarge" onclick="window.location.href='game.html'"> play again </button>
+            <br>
+            <button id="back2" class="enlarge" onclick="window.location.href='index.html'"> main menu </button>
+
+            <span id = "closebtn" class="close-btn" onclick="closeLoser()"> &times; </span>
+        </div>
+    </div>
+
+    <!--eror-->
+    <div class = "error" id="error">
+        <div class = "error-content">
+            <div class = "errorcont">
+                <p id = "errortext"> error! </p>
+            </div>
+            <p id = "errormsg"> this is <span class = "bold"> not </span>a valid passcode. please only use numbers and fill all spaces </p>
+        </div>
+    </div>
+
+
+        <!-- stars -->
+        <img id="star6" class = infiniteslide1 src = "assets/images/rainbowstar_purple.png">
+        <img id="star7" class = infiniteslide2 src = "assets/images/rainbowstar_purple.png">
+        <img id="star8" class = infiniteslide2 src = "assets/images/rainbowstar_purple.png">
+        <img id="star9" class = infiniteslide3 src = "assets/images/rainbowstar_purple.png">
+        <img id="star10" class = infiniteslide3 src = "assets/images/rainbowstar_purple.png">
+
+        <script src = "test.js" type="module"></script>
+        <script src = "menu.js"></script>
+    </body>
+</html>
