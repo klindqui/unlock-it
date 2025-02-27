@@ -22,6 +22,8 @@ body {
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    justify-self: center;
+    
 }
 
 .container {
@@ -670,4 +672,62 @@ button {
     color: #627398;
     line-height: 20px;
     text-align: center;
+}
+
+/* loser screen stars */
+
+#star-l1 {
+    position: absolute;
+    width: 80px;
+    top: -40px;
+    left: -20px;
+}
+
+#star-l2 {
+    position: absolute;
+    width: 60px;
+    top: 20px;
+    left: -40px;
+}
+
+#star-l3 {
+    position: absolute;
+    width: 80px;
+    right: -40px;
+    top: 100px;
+}
+
+#star-l4 {
+    position: absolute;
+    width: 90px;
+    bottom: -40px;
+}
+
+/*winner screen stars*/
+#star-c1 {
+    position: absolute;
+    width: 60px;
+    top: 160px;
+    right: 0px
+}
+
+#star-c2 {
+    position: absolute;
+    width: 80px;
+    top: -40px;
+    left: 10px;
+}
+
+#star-c3 {
+    position: absolute;
+    width: 80px;
+    right: -30px;
+    top: 200px;
+}
+
+#star-c4 {
+    position: absolute;
+    width: 90px;
+    bottom: -40px;
+    left: -40px
 }

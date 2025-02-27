@@ -31,3 +31,9 @@ function closeLoser() {
     loser.classList.remove("open-popup");
     document.getElementById("overlay").classList.remove("show");
 }
+
+function openGame() {
+    window.open('loading.html');
+
+    
+}
